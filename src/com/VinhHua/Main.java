@@ -11,6 +11,7 @@ public class Main {
  	    insertionSort(array2);
         System.out.println(Arrays.toString(array));
         System.out.println(Arrays.toString(array2));
+        System.out.println(binarySearch(array, 3));
 
     }
 
@@ -34,6 +35,22 @@ public class Main {
             }
             array[j] = key;
         }
+    }
+
+    private static int binarySearch(int[] array, int value) {
+        int left = 0;
+        int right = array.length;
+        while (left < right) {
+            int mid = (left + right) / 2;
+            if (array[mid] == value) {
+                return mid;
+            } else if (array[mid] > value) {
+                right = mid;
+            } else {
+                left = mid + 1;
+            }
+        }
+        return -1;
     }
 
     private static void swap(int[] array, int i, int j) {
