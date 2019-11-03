@@ -37,6 +37,7 @@ public class Main {
         }
     }
 
+    // Comment
     private static int binarySearch(int[] array, int value) {
         int left = 0;
         int right = array.length - 1;
