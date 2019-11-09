@@ -37,7 +37,19 @@ public class Main {
         }
     }
 
-    // Comment
+    public static void selectionSort(int[] arr) {
+        for (int i = arr.length - 1; i > 0; i--) {
+            int largest = 0;
+            for (int j = 1; j <= i; j++) {
+                if (arr[j] > arr[largest]) {
+                    largest = j;
+                }
+            }
+            swap(arr, largest, i);
+        }
+    }
+
+    // Binary search
     private static int binarySearch(int[] array, int value) {
         int left = 0;
         int right = array.length - 1;
